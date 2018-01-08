@@ -21,6 +21,7 @@ class CoinMarketCap {
     /**
      * Returns Ticker data.
      *
+     * @param int $start return results from rank [start] and above.
      * @param int $limit only returns the top limit results.
      * @param string $convert return price, 24h volume, and market cap in terms
      *           of another currency.
