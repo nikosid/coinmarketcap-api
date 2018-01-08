@@ -30,8 +30,9 @@ class CoinMarketCap {
      *
      * @return array
      */
-    public static function getTicker($limit = 10, $convert = "USD") {
+    public static function getTicker($start = 0, $limit = 10, $convert = "USD") {
         return Request::exec(self::API_URL . "ticker/", [
+            'start' => $start,
             'limit' => $limit,
             'convert' => $convert
         ]);
